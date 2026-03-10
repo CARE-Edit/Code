@@ -6,7 +6,7 @@
 
 >The Hong Kong University of Science and Technology (HKUST)
 
-[![arXiv](https://img.shields.io/badge/arXiv-2603.08589-b31b1b.svg)](https://arxiv.org/abs/2603.08589) [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://wangandyyucheng.github.io/CARE-Edit/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow)](#) [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-green)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.08589-b31b1b.svg)](https://arxiv.org/abs/2603.08589) [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://wangandyyucheng.github.io/CARE-Edit/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-yellow)](https://huggingface.co/papers/2603.08589) [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-green)](#)
 
 ---
 
