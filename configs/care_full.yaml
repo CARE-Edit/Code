@@ -1,0 +1,45 @@
+project:
+  name: care-edit-full
+  output_dir: outputs/full
+
+model:
+  flux_path: black-forest-labs/FLUX.1-dev
+  dtype: bfloat16
+  resolution: 512
+  checkpoint:
+  lora_rank: 4
+  care_placement: post_transformer
+  top_k: 3
+  shared_expert_weight: 0.05
+
+data:
+  train_json: datasets/care_full/train.json
+  eval_json: datasets/care_full/eval.json
+  image_root: datasets/care_full/images
+  stage1_tasks: [instruction, removal, replacement]
+  stage2_tasks: [instruction, removal, replacement, style, contextual, multi_subject]
+
+training:
+  max_steps: 100000
+  stage1_steps: 40000
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  checkpointing_steps: 1000
+  mixed_precision: bf16
+  gradient_checkpointing: true
+  seed: 42
+
+loss:
+  diffusion: 1.0
+  load: 0.01
+  mask: 0.1
+  mix: 0.05
+
+inference:
+  num_steps: 28
+  guidance_scale: 3.5
+  image_guidance_scale: 1.0
+  seed: 42

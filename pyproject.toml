@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "care-edit-reproduction"
+version = "0.1.0"
+description = "Research reproduction scaffold for CARE-Edit: Condition-Aware Routing of Experts for Contextual Image Editing."
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "accelerate",
+  "diffusers>=0.31.0",
+  "einops",
+  "gradio",
+  "numpy",
+  "opencv-python",
+  "peft",
+  "pillow",
+  "pyyaml",
+  "safetensors",
+  "torch",
+  "torchvision",
+  "tqdm",
+  "transformers",
+]
+
+[project.optional-dependencies]
+train = ["datasets", "lightning", "prodigyopt", "wandb"]
+dev = ["ruff"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["caredit*"]
+
+[tool.setuptools.package-data]
+"caredit.vendor.omini_control" = ["LICENSE"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
