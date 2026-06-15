@@ -18,7 +18,8 @@
 
 - ☑ Our paper is now available on [arXiv](https://arxiv.org/abs/2603.08589).
 - ☑ **CARE-Edit** is accepted by **CVPR 2026**. 
-- ☑ Training and Inference code have been pre-released. Official datasets will be released separately.
+- ☑ Training and Inference code have been pre-released.
+- ☐ All checkpoints and datasets full-released.
 
 ## Roadmap
 
